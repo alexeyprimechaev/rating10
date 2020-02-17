@@ -14,6 +14,12 @@
 		808C254F23FAB0D90070B5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 808C254E23FAB0D90070B5F0 /* Assets.xcassets */; };
 		808C255223FAB0D90070B5F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 808C255123FAB0D90070B5F0 /* Preview Assets.xcassets */; };
 		808C255523FAB0D90070B5F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808C255323FAB0D90070B5F0 /* LaunchScreen.storyboard */; };
+		808C255D23FAB1160070B5F0 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C255C23FAB1160070B5F0 /* Rating.swift */; };
+		808C255F23FAD14E0070B5F0 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C255E23FAD14E0070B5F0 /* RatingView.swift */; };
+		808C256123FAD39F0070B5F0 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256023FAD39F0070B5F0 /* Toggle.swift */; };
+		808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256223FAD6A70070B5F0 /* RatingDetailView.swift */; };
+		808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256423FAD83B0070B5F0 /* ToggleButton.swift */; };
+		808C256723FAD8750070B5F0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256623FAD8750070B5F0 /* Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		808C255123FAB0D90070B5F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		808C255423FAB0D90070B5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		808C255623FAB0D90070B5F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		808C255C23FAB1160070B5F0 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		808C255E23FAD14E0070B5F0 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		808C256023FAD39F0070B5F0 /* Toggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
+		808C256223FAD6A70070B5F0 /* RatingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingDetailView.swift; sourceTree = "<group>"; };
+		808C256423FAD83B0070B5F0 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		808C256623FAD8750070B5F0 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,12 @@
 				808C255323FAB0D90070B5F0 /* LaunchScreen.storyboard */,
 				808C255623FAB0D90070B5F0 /* Info.plist */,
 				808C254923FAB0D60070B5F0 /* rating10.xcdatamodeld */,
+				808C255E23FAD14E0070B5F0 /* RatingView.swift */,
+				808C256623FAD8750070B5F0 /* Styles.swift */,
+				808C256223FAD6A70070B5F0 /* RatingDetailView.swift */,
+				808C255C23FAB1160070B5F0 /* Rating.swift */,
+				808C256023FAD39F0070B5F0 /* Toggle.swift */,
+				808C256423FAD83B0070B5F0 /* ToggleButton.swift */,
 				808C255023FAB0D90070B5F0 /* Preview Content */,
 			);
 			path = rating10;
@@ -149,8 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808C256123FAD39F0070B5F0 /* Toggle.swift in Sources */,
+				808C256723FAD8750070B5F0 /* Styles.swift in Sources */,
 				808C254623FAB0D60070B5F0 /* AppDelegate.swift in Sources */,
 				808C254823FAB0D60070B5F0 /* SceneDelegate.swift in Sources */,
+				808C255D23FAB1160070B5F0 /* Rating.swift in Sources */,
+				808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */,
+				808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */,
+				808C255F23FAD14E0070B5F0 /* RatingView.swift in Sources */,
 				808C254D23FAB0D60070B5F0 /* ContentView.swift in Sources */,
 				808C254B23FAB0D60070B5F0 /* rating10.xcdatamodeld in Sources */,
 			);
