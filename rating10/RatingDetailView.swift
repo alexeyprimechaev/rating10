@@ -13,10 +13,16 @@ struct RatingDetailView: View {
     @ObservedObject var rating = Rating()
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text(rating.title)
-            ToggleButton(title: "Rating", values: Rating.ratings, value: $rating.rating)
-            }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                Spacer().frame(height:21)
+                TextField("", text: $rating.title)
+                    .titleStyle()
+                    .padding(7)
+                ToggleButton(title: "Rating", values: Rating.ratings, value: $rating.rating)
+                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                .padding(.leading, 21)
+        }
     }
 }
 
