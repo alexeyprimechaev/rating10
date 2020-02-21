@@ -34,14 +34,14 @@ struct RatingView: View {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .padding(2)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 64, alignment: .leading)
-                        .foregroundColor(rating.rating == Rating.ratings[1] ? Color(self.settings.selectedTheme+"BackgroundColor") : Color(self.settings.selectedTheme+"FillCardColor"))
+                        .foregroundColor(rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor") : Color(self.settings.selectedTheme+"FillCardColor"))
 
                     // Текст и Тоггл
                     HStack(spacing: 0) {
                         Text(rating.title)
                             .padding(.leading, 18)
                             .font(.system(size: 17, weight: .semibold, design: .default))
-                        .foregroundColor(rating.rating == Rating.ratings[1] ? Color(self.settings.selectedTheme+"OutlineCardTextColor") : Color(self.settings.selectedTheme+"FillCardTextColor"))
+                        .foregroundColor(rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"OutlineCardTextColor") : Color(self.settings.selectedTheme+"FillCardTextColor"))
                         Spacer()
                     }
             }
