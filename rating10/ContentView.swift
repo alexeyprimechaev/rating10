@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Rating.getAllRatings()) var ratings:FetchedResults<Rating>
+  
     
     var body: some View {
         List() {
