@@ -15,7 +15,17 @@ struct SettingsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Text("oh hey")
+                Text("current theme: " + themes[self.settings.selectedTheme])
+                Button(action: {
+                    if(self.settings.selectedTheme == themes.count-1) {
+                        self.settings.selectedTheme = 0
+                    } else {
+                       self.settings.selectedTheme += 1
+                    }
+                    
+                           }) {
+                               Text("change")
+                           }
         }
     }
 }

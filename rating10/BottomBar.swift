@@ -31,13 +31,13 @@ struct BottomBar: View {
             }) {
                 HStack {
                 Image(systemName: "plus")
-                    .foregroundColor(Color(self.settings.selectedTheme+"AddButtonColor"))
+                    .foregroundColor(Color(themes[self.settings.selectedTheme]+"AddButtonColor"))
                 Text("Add Rating")
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(self.settings.selectedTheme+"AddButtonColor"))
+                    .foregroundColor(Color(themes[self.settings.selectedTheme]+"AddButtonColor"))
                 }
             }.padding(16)
-        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 52, maxHeight: 52, alignment: .center).background(Color(self.settings.selectedTheme+"BackgroundColor"))
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 52, maxHeight: 52, alignment: .center).background(Color(themes[self.settings.selectedTheme]+"BackgroundColor"))
     
         
             
