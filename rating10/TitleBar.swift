@@ -38,7 +38,7 @@ struct TitleBar: View {
                     self.showDetail.toggle()
                 }) {
                     Image(systemName: "circle")
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color(themes[self.settings.selectedTheme]+"TitleColor"))
                 }.padding(16)
                 .sheet(isPresented: $showDetail) {
                     SettingsView()
