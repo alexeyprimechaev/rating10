@@ -15,6 +15,7 @@ struct ToggleButton: View {
     @State var values = [String]()
     @Binding var value: String
     @State var index = Int()
+    @EnvironmentObject var settings: UserSettings
     
     //MARK: - View
     var body: some View {
@@ -46,7 +47,7 @@ struct ToggleButton: View {
                         .opacity(self.value == value ? 1 : 0.5)
                 }.smallTitleStyle()
                 
-            }
+            }.foregroundColor(Color(themes[self.settings.selectedTheme]+"AddButtonColor"))
         }
             
             

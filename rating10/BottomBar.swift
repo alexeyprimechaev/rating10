@@ -17,17 +17,16 @@ struct BottomBar: View {
     var body: some View {
         HStack {
             Button(action: {
-                    let rating = Rating(context: self.managedObjectContext)
-                    rating.title = ""
+                let rating = Rating(context: self.managedObjectContext)
+                rating.title = "Wow"
                 rating.rating = Rating.ratings[0]
-                    rating.createdAt = Date()
+                rating.createdAt = Date()
 
-                    do {
-                        try self.managedObjectContext.save()
-                    } catch {
-                        print(error)
-                    }
-                
+                do {
+                    try self.managedObjectContext.save()
+                } catch {
+                    print(error)
+                }
             }) {
                 HStack {
                 Image(systemName: "plus")

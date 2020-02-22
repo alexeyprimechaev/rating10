@@ -48,6 +48,7 @@ struct RatingView: View {
         }
         .sheet(isPresented: $showDetail) {
             RatingDetailView(rating: self.rating)
+            .environmentObject(self.settings)
         }
                     
     }

@@ -11,6 +11,8 @@ import SwiftUI
 struct RatingDetailView: View {
     
     @ObservedObject var rating = Rating()
+    @EnvironmentObject var settings: UserSettings
+
     
     var body: some View {
         ScrollView {
@@ -18,8 +20,10 @@ struct RatingDetailView: View {
                 Spacer().frame(height:21)
                 TextField("", text: $rating.title)
                     .titleStyle()
+                    .foregroundColor(rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"OutlineCardColor") : Color(themes[self.settings.selectedTheme]+"FillCardColor"))
                     .padding(7)
                 ToggleButton(title: "Rating", values: Rating.ratings, value: $rating.rating)
+                .environmentObject(self.settings)
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                 .padding(.leading, 21)
         }

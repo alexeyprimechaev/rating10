@@ -11,6 +11,7 @@ import SwiftUI
 struct Toggle: View {
     
     @Binding var isOn: Int
+
     
     var body: some View {
         
