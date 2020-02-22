@@ -19,7 +19,7 @@ struct BottomBar: View {
             Button(action: {
                     let rating = Rating(context: self.managedObjectContext)
                     rating.title = ""
-                rating.rating == Rating.ratings[0]
+                rating.rating = Rating.ratings[0]
                     rating.createdAt = Date()
 
                     do {

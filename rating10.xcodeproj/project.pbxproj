@@ -22,6 +22,7 @@
 		808C256723FAD8750070B5F0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256623FAD8750070B5F0 /* Styles.swift */; };
 		DB636ED824013F1000EA9732 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED724013F1000EA9732 /* TitleBar.swift */; };
 		DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED924013F3500EA9732 /* BottomBar.swift */; };
+		DB636EDC2401542C00EA9732 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636EDB2401542C00EA9732 /* SettingsView.swift */; };
 		DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB915A1724002B7F003CBC49 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		808C256623FAD8750070B5F0 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		DB636ED724013F1000EA9732 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
 		DB636ED924013F3500EA9732 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		DB636EDB2401542C00EA9732 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DB915A1724002B7F003CBC49 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				808C255E23FAD14E0070B5F0 /* RatingView.swift */,
 				808C256623FAD8750070B5F0 /* Styles.swift */,
 				808C256223FAD6A70070B5F0 /* RatingDetailView.swift */,
+				DB636EDB2401542C00EA9732 /* SettingsView.swift */,
 				808C255C23FAB1160070B5F0 /* Rating.swift */,
 				808C256023FAD39F0070B5F0 /* Toggle.swift */,
 				808C256423FAD83B0070B5F0 /* ToggleButton.swift */,
@@ -183,6 +186,7 @@
 				DB636ED824013F1000EA9732 /* TitleBar.swift in Sources */,
 				808C255D23FAB1160070B5F0 /* Rating.swift in Sources */,
 				808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */,
+				DB636EDC2401542C00EA9732 /* SettingsView.swift in Sources */,
 				808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */,
 				808C255F23FAD14E0070B5F0 /* RatingView.swift in Sources */,
 				808C254D23FAB0D60070B5F0 /* ContentView.swift in Sources */,

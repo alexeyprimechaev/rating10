@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TitleBar: View {
     @EnvironmentObject var settings: UserSettings
+    @State var showDetail = false
     var body: some View {
         ZStack {
             Rectangle()
@@ -34,11 +35,14 @@ struct TitleBar: View {
                 
                 
                 Button(action: {
-                    print("Edit button was tapped")
+                    self.showDetail.toggle()
                 }) {
                     Image(systemName: "circle")
                         .foregroundColor(Color.black)
                 }.padding(16)
+                .sheet(isPresented: $showDetail) {
+                    SettingsView()
+                }
             }
         }
     }
