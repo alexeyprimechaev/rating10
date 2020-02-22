@@ -20,6 +20,8 @@
 		808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256223FAD6A70070B5F0 /* RatingDetailView.swift */; };
 		808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256423FAD83B0070B5F0 /* ToggleButton.swift */; };
 		808C256723FAD8750070B5F0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256623FAD8750070B5F0 /* Styles.swift */; };
+		DB636ED824013F1000EA9732 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED724013F1000EA9732 /* TitleBar.swift */; };
+		DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED924013F3500EA9732 /* BottomBar.swift */; };
 		DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB915A1724002B7F003CBC49 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		808C256223FAD6A70070B5F0 /* RatingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingDetailView.swift; sourceTree = "<group>"; };
 		808C256423FAD83B0070B5F0 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		808C256623FAD8750070B5F0 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		DB636ED724013F1000EA9732 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
+		DB636ED924013F3500EA9732 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		DB915A1724002B7F003CBC49 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +79,8 @@
 				808C254523FAB0D60070B5F0 /* AppDelegate.swift */,
 				808C254723FAB0D60070B5F0 /* SceneDelegate.swift */,
 				808C254C23FAB0D60070B5F0 /* ContentView.swift */,
+				DB636ED724013F1000EA9732 /* TitleBar.swift */,
+				DB636ED924013F3500EA9732 /* BottomBar.swift */,
 				DB915A1724002B7F003CBC49 /* UserSettings.swift */,
 				808C254E23FAB0D90070B5F0 /* Assets.xcassets */,
 				808C255323FAB0D90070B5F0 /* LaunchScreen.storyboard */,
@@ -174,11 +180,13 @@
 				808C256723FAD8750070B5F0 /* Styles.swift in Sources */,
 				808C254623FAB0D60070B5F0 /* AppDelegate.swift in Sources */,
 				808C254823FAB0D60070B5F0 /* SceneDelegate.swift in Sources */,
+				DB636ED824013F1000EA9732 /* TitleBar.swift in Sources */,
 				808C255D23FAB1160070B5F0 /* Rating.swift in Sources */,
 				808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */,
 				808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */,
 				808C255F23FAD14E0070B5F0 /* RatingView.swift in Sources */,
 				808C254D23FAB0D60070B5F0 /* ContentView.swift in Sources */,
+				DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */,
 				808C254B23FAB0D60070B5F0 /* rating10.xcdatamodeld in Sources */,
 				DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */,
 			);

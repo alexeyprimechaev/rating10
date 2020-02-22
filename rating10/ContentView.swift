@@ -15,6 +15,8 @@ struct ContentView: View {
   
     
     var body: some View {
+        VStack(spacing: 0) {
+        TitleBar()
         List() {
             ForEach(ratings) { rating in
                 RatingView(rating: rating)
@@ -34,6 +36,8 @@ struct ContentView: View {
                 Text("Add")
             }
         }
+        BottomBar()
+    }
     }
 }
 
