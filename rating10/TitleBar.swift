@@ -41,7 +41,7 @@ struct TitleBar: View {
                         .foregroundColor(Color(themes[self.settings.selectedTheme]+"TitleColor"))
                 }.padding(16)
                 .sheet(isPresented: $showDetail) {
-                    SettingsView()
+                    SettingsView(productsStore: ProductsStore.shared)
                     .environmentObject(self.settings)
                 }
             }

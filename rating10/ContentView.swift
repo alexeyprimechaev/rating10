@@ -11,12 +11,13 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
+    @ObservedObject var productsStore : ProductsStore
     @FetchRequest(fetchRequest: Rating.getAllRatings()) var ratings:FetchedResults<Rating>
   
     
     var body: some View {
         VStack(spacing: 0) {
-        TitleBar()
+        TitleBar() 
         List() {
             ForEach(ratings) { rating in
                 RatingView(rating: rating)
@@ -41,8 +42,3 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

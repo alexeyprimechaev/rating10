@@ -24,6 +24,10 @@
 		DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED924013F3500EA9732 /* BottomBar.swift */; };
 		DB636EDC2401542C00EA9732 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636EDB2401542C00EA9732 /* SettingsView.swift */; };
 		DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB915A1724002B7F003CBC49 /* UserSettings.swift */; };
+		DBE186BC240297A700FBEECE /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE186BB240297A700FBEECE /* PurchaseButton.swift */; };
+		DBF9727C240292700008A0AC /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9727B240292700008A0AC /* ProductsStore.swift */; };
+		DBF9727E240293350008A0AC /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9727D240293350008A0AC /* IAPManager.swift */; };
+		DBF972802402934F0008A0AC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9727F2402934F0008A0AC /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		DB636ED924013F3500EA9732 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		DB636EDB2401542C00EA9732 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DB915A1724002B7F003CBC49 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		DBE186BB240297A700FBEECE /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		DBF9727B240292700008A0AC /* ProductsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsStore.swift; sourceTree = "<group>"; };
+		DBF9727D240293350008A0AC /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		DBF9727F2402934F0008A0AC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +89,11 @@
 				808C254523FAB0D60070B5F0 /* AppDelegate.swift */,
 				808C254723FAB0D60070B5F0 /* SceneDelegate.swift */,
 				808C254C23FAB0D60070B5F0 /* ContentView.swift */,
+				DBF9727D240293350008A0AC /* IAPManager.swift */,
+				DBF9727F2402934F0008A0AC /* Extensions.swift */,
 				DB636ED724013F1000EA9732 /* TitleBar.swift */,
 				DB636ED924013F3500EA9732 /* BottomBar.swift */,
+				DBF9727B240292700008A0AC /* ProductsStore.swift */,
 				DB915A1724002B7F003CBC49 /* UserSettings.swift */,
 				808C254E23FAB0D90070B5F0 /* Assets.xcassets */,
 				808C255323FAB0D90070B5F0 /* LaunchScreen.storyboard */,
@@ -92,6 +103,7 @@
 				808C256623FAD8750070B5F0 /* Styles.swift */,
 				808C256223FAD6A70070B5F0 /* RatingDetailView.swift */,
 				DB636EDB2401542C00EA9732 /* SettingsView.swift */,
+				DBE186BB240297A700FBEECE /* PurchaseButton.swift */,
 				808C255C23FAB1160070B5F0 /* Rating.swift */,
 				808C256023FAD39F0070B5F0 /* Toggle.swift */,
 				808C256423FAD83B0070B5F0 /* ToggleButton.swift */,
@@ -179,7 +191,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF9727E240293350008A0AC /* IAPManager.swift in Sources */,
 				808C256123FAD39F0070B5F0 /* Toggle.swift in Sources */,
+				DBE186BC240297A700FBEECE /* PurchaseButton.swift in Sources */,
 				808C256723FAD8750070B5F0 /* Styles.swift in Sources */,
 				808C254623FAB0D60070B5F0 /* AppDelegate.swift in Sources */,
 				808C254823FAB0D60070B5F0 /* SceneDelegate.swift in Sources */,
@@ -187,10 +201,12 @@
 				808C255D23FAB1160070B5F0 /* Rating.swift in Sources */,
 				808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */,
 				DB636EDC2401542C00EA9732 /* SettingsView.swift in Sources */,
+				DBF9727C240292700008A0AC /* ProductsStore.swift in Sources */,
 				808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */,
 				808C255F23FAD14E0070B5F0 /* RatingView.swift in Sources */,
 				808C254D23FAB0D60070B5F0 /* ContentView.swift in Sources */,
 				DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */,
+				DBF972802402934F0008A0AC /* Extensions.swift in Sources */,
 				808C254B23FAB0D60070B5F0 /* rating10.xcdatamodeld in Sources */,
 				DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */,
 			);
