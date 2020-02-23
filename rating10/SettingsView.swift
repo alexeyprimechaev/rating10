@@ -26,6 +26,17 @@ struct SettingsView: View {
                            }) {
                                Text("change")
                            }
+                
+                Spacer().frame(width: 10.0, height: 50.0, alignment: .leading)
+                
+                Button(action: {
+                    print("ha")
+                    
+                    
+                           }) {
+                               Text("iap test")
+                           }
+                
         }
     }
 }
