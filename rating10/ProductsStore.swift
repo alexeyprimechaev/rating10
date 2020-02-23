@@ -16,7 +16,7 @@ class ProductsStore : ObservableObject {
     
     static let shared = ProductsStore()
     let subscription_1 = "Rating10Plus"
-    let shared_secret = "MY_SHARED_SECRET43295087"
+    let shared_secret = "30fad09d57f64139ad55e5096d4e5b66"
     
     @Published var products: [SKProduct] = []
     @Published var anyString = "123" // little trick to force reload ContentView from PurchaseView by just changing any Published value

@@ -11,12 +11,19 @@ import StoreKit
 extension SKProduct {
     
     func subscriptionStatus() -> String {
+        
+        
+        dump(IAPManager.shared.expirationDateFor(productIdentifier))
+        
+        
         if let expDate = IAPManager.shared.expirationDateFor(productIdentifier) {
             let formatter = DateFormatter()
             formatter.dateStyle = .medium
             formatter.timeStyle = .medium
             
             let dateString = formatter.string(from: expDate)
+            
+            dump(expDate)
             
             if Date() > expDate {
                 return "Subscription expired: \(localizedTitle) at: \(dateString)"
