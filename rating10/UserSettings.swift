@@ -8,7 +8,7 @@
 
 import Foundation
 
-let themes = ["default", "capitanUSA", "lgbtqplus"]
+let themes = ["default", "capitanUSA", "lgbtqplus", "angryClown"]
 
 class UserSettings: ObservableObject {
     var unlockedThemes = [0]
