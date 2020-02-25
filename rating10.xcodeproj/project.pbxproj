@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED924013F3500EA9732 /* BottomBar.swift */; };
 		DB636EDC2401542C00EA9732 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636EDB2401542C00EA9732 /* SettingsView.swift */; };
 		DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB915A1724002B7F003CBC49 /* UserSettings.swift */; };
+		DBA73789240549120073D0F6 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = DBA73788240549120073D0F6 /* SwiftyStoreKit */; };
 		DBE186BC240297A700FBEECE /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE186BB240297A700FBEECE /* PurchaseButton.swift */; };
 		DBF9727C240292700008A0AC /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9727B240292700008A0AC /* ProductsStore.swift */; };
 		DBF9727E240293350008A0AC /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF9727D240293350008A0AC /* IAPManager.swift */; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA73789240549120073D0F6 /* SwiftyStoreKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +138,9 @@
 			dependencies = (
 			);
 			name = rating10;
+			packageProductDependencies = (
+				DBA73788240549120073D0F6 /* SwiftyStoreKit */,
+			);
 			productName = rating10;
 			productReference = 808C254223FAB0D60070B5F0 /* rating10.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 808C253923FAB0D60070B5F0;
+			packageReferences = (
+				DBA73787240549120073D0F6 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+			);
 			productRefGroup = 808C254323FAB0D60070B5F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -402,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBA73787240549120073D0F6 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBA73788240549120073D0F6 /* SwiftyStoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBA73787240549120073D0F6 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			productName = SwiftyStoreKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		808C254923FAB0D60070B5F0 /* rating10.xcdatamodeld */ = {

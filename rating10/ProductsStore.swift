@@ -25,6 +25,7 @@ class ProductsStore : ObservableObject {
         anyString = UUID().uuidString
     }
     
+    
     func initializeProducts(){
         IAPManager.shared.startWith(arrayOfIds: [subscription_1], sharedSecret: shared_secret) { products in
             self.products = products
