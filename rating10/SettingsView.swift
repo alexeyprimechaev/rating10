@@ -15,7 +15,7 @@ import SwiftyStoreKit
 struct SettingsView: View {
     
      @EnvironmentObject var settings: UserSettings
-     @ObservedObject var productsStore : ProductsStore
+
     
     var body: some View {
         ScrollView {

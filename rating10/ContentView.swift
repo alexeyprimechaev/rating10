@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
-    @ObservedObject var productsStore : ProductsStore
+  
     @FetchRequest(fetchRequest: Rating.getAllRatings()) var ratings:FetchedResults<Rating>
   
     
