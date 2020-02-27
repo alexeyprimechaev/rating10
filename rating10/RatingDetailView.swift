@@ -20,12 +20,15 @@ struct RatingDetailView: View {
                 Spacer().frame(height:21)
                 TextField("", text: $rating.title)
                     .titleStyle()
-                    .foregroundColor(rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"OutlineCardColor") : Color(themes[self.settings.selectedTheme]+"FillCardColor"))
+                    .foregroundColor(rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"OutlineCardTextColor") : Color(themes[self.settings.selectedTheme]+"FillCardTextColor"))
                     .padding(7)
                 ToggleButton(title: "Rating", values: Rating.ratings, value: $rating.rating)
                 .environmentObject(self.settings)
+                
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                 .padding(.leading, 21)
+                
+           
         }
     }
 }

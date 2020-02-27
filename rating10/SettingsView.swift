@@ -21,6 +21,13 @@ struct SettingsView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 
+             //   ForEach(themes) { theme in
+                    Button(action: {
+                     productInfo("CapitanUSATheme")
+                    }) {
+                        Text("print CapitanUSATheme data")
+                    }
+                //}
                 
                 Button(action: {
                  productInfo("CapitanUSATheme")

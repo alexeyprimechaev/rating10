@@ -26,6 +26,7 @@
 		DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB915A1724002B7F003CBC49 /* UserSettings.swift */; };
 		DBA73789240549120073D0F6 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = DBA73788240549120073D0F6 /* SwiftyStoreKit */; };
 		DBA7378B240559100073D0F6 /* PurchaseTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA7378A2405590F0073D0F6 /* PurchaseTools.swift */; };
+		DBFAB8E42407D66C00A94076 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAB8E32407D66C00A94076 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		DB636EDB2401542C00EA9732 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DB915A1724002B7F003CBC49 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		DBA7378A2405590F0073D0F6 /* PurchaseTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTools.swift; sourceTree = "<group>"; };
+		DBFAB8E32407D66C00A94076 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				DB636ED724013F1000EA9732 /* TitleBar.swift */,
 				DB636ED924013F3500EA9732 /* BottomBar.swift */,
 				DB915A1724002B7F003CBC49 /* UserSettings.swift */,
+				DBFAB8E32407D66C00A94076 /* Theme.swift */,
 				808C254E23FAB0D90070B5F0 /* Assets.xcassets */,
 				808C255323FAB0D90070B5F0 /* LaunchScreen.storyboard */,
 				808C255623FAB0D90070B5F0 /* Info.plist */,
@@ -199,6 +202,7 @@
 				DBA7378B240559100073D0F6 /* PurchaseTools.swift in Sources */,
 				808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */,
 				DB636EDC2401542C00EA9732 /* SettingsView.swift in Sources */,
+				DBFAB8E42407D66C00A94076 /* Theme.swift in Sources */,
 				808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */,
 				808C255F23FAD14E0070B5F0 /* RatingView.swift in Sources */,
 				808C254D23FAB0D60070B5F0 /* ContentView.swift in Sources */,

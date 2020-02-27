@@ -47,7 +47,7 @@ struct ToggleButton: View {
                         .opacity(self.value == value ? 1 : 0.5)
                 }.smallTitleStyle()
                 
-            }.foregroundColor(self.value == self.values[0] ? Color(themes[self.settings.selectedTheme]+"OutlineCardColor") : Color(themes[self.settings.selectedTheme]+"FillCardColor"))
+            }.foregroundColor(self.value == self.values[0] ? Color(themes[self.settings.selectedTheme]+"OutlineCardTextColor") : Color(themes[self.settings.selectedTheme]+"FillCardTextColor"))
             
             //.foregroundColor(Color(themes[self.settings.selectedTheme]+"AddButtonColor"))
         }

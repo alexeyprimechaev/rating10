@@ -47,11 +47,12 @@ struct RatingView: View {
             }
         }
         .sheet(isPresented: $showDetail) {
-            RatingDetailView(rating: self.rating)
+            RatingDetailView(rating: self.rating).background(self.rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"BackgroundColor") : Color(themes[self.settings.selectedTheme]+"FillModalCardColor"))
             .environmentObject(self.settings)
         }
                     
     }
+    
 }
 
 struct RatingView_Previews: PreviewProvider {
