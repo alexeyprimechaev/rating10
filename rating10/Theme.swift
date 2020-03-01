@@ -8,16 +8,34 @@
 
 import Foundation
 
-let idsdontdelete = ["com.monochromedev.rating10.WonderPersonsThemeBundle", "com.monochromedev.rating10.DarkPersonsThemeBundle"]
 
-struct Bundle {
+
+let bundles = [
+    Bundle(themes: [Theme(codeName: "capitanUSA", displayName: "Capitan USA")
+        ], productID: "com.monochromedev.rating10.WonderPersonsThemeBundle", displayName: "Wonder Persons Theme Bundle"
+    ),
+    Bundle(themes: [Theme(codeName: "angryClown", displayName: "Angry Clown"),
+        Theme(codeName: "", displayName: "")
+        ], productID: "com.monochromedev.rating10.DarkPersonsThemeBundle", displayName: "Dark Persons Theme Bundle"
+    )
+    
+]
+
+struct Bundle: Hashable{
+    static func == (lhs: Bundle, rhs: Bundle) -> Bool {
+        lhs.productID == rhs.productID
+    }
+    
     let themes: [Theme]
     let productID: String
     let displayName: String
-    let isPurchased: Bool
 }
 
-struct Theme {
+struct Theme: Hashable {
+    static func == (lhs: Theme, rhs: Theme) -> Bool {
+        return lhs.codeName == rhs.codeName
+    }
+    
     let codeName:String
     let displayName: String
 }

@@ -21,51 +21,54 @@ struct SettingsView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 
-             //   ForEach(themes) { theme in
-                    Button(action: {
-                     productInfo("CapitanUSATheme")
-                    }) {
-                        Text("print CapitanUSATheme data")
-                    }
-                //}
+
+//                    Button(action: {
+//                     productInfo("CapitanUSATheme")
+//                    }) {
+//                        Text("print CapitanUSATheme data")
+//                    }
+//
+//
+//                Button(action: {
+//                 productInfo("CapitanUSATheme")
+//                }) {
+//                    Text("print CapitanUSATheme data")
+//                }
+//
+//
+//                Button(action: {
+//                 purchaseProduct("CapitanUSATheme")
+//                }) {
+//                    Text("purchase CapitanUSATheme")
+//                }
+//
+//
+//                Button(action: {
+//                  restorePurchases()
+//
+//                }) {
+//                    Text("restore purchases")
+//                }
                 
-                Button(action: {
-                 productInfo("CapitanUSATheme")
-                }) {
-                    Text("print CapitanUSATheme data")
+              
+                ForEach(bundles, id: \.self) { bundle in
+                    Text(bundle.displayName)
                 }
                 
                 
-                Button(action: {
-                 purchaseProduct("CapitanUSATheme")
-                }) {
-                    Text("purchase CapitanUSATheme")
-                }
-                
-                
-                Button(action: {
-                  restorePurchases()
-                 
-                }) {
-                    Text("restore purchases")
-                }
-                
-                
-                
-                
-                Text("current theme: " + themes[self.settings.selectedTheme])
-                Button(action: {
-                    if(self.settings.selectedTheme == themes.count-1) {
-                        self.settings.selectedTheme = 0
-                    } else {
-                       self.settings.selectedTheme += 1
-                    }
-                    
-                           }) {
-                               Text("change")
-                           }
-                
-                Spacer().frame(width: 10.0, height: 50.0, alignment: .leading)
+//                Text("current theme: " + themes[self.settings.selectedTheme])
+//                Button(action: {
+//                    if(self.settings.selectedTheme == themes.count-1) {
+//                        self.settings.selectedTheme = 0
+//                    } else {
+//                       self.settings.selectedTheme += 1
+//                    }
+//
+//                           }) {
+//                               Text("change")
+//                           }
+//
+//                Spacer().frame(width: 10.0, height: 50.0, alignment: .leading)
                 
              
                 
