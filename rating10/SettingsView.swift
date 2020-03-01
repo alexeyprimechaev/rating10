@@ -48,12 +48,24 @@ struct SettingsView: View {
                 ForEach(bundles, id: \.self) { bundle in
                     VStack() {
                         Text(bundle.displayName)
-                        Text("purchased: " + String(UserDefaults.standard.bool(forKey: bundle.productID)))
-                        Button(action: {
-                        purchaseProduct(bundle.productID)
-                        }) {
-                            Text("purchase")
+                        if (UserDefaults.standard.bool(forKey: bundle.productID)) {
+                            ForEach(bundle.themes, id: \.self) { theme in
+                                Button(action: {
+                                 //   self.settings.selectedTheme = theme.codeName
+                                    
+                                }) {
+                                    Text("hey")
+                                }
+                            }
                         }
+                        else {
+                            Button(action: {
+                            purchaseProduct(bundle.productID)
+                            }) {
+                                Text("purchase")
+                            }
+                        }
+                        
                         
                         
 

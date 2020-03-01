@@ -14,8 +14,7 @@ let bundles = [
     Bundle(themes: [Theme(codeName: "capitanUSA", displayName: "Capitan USA")
         ], productID: "com.monochromedev.rating10.WonderPersonsThemeBundle", displayName: "Wonder Persons Theme Bundle"
     ),
-    Bundle(themes: [Theme(codeName: "angryClown", displayName: "Angry Clown"),
-        Theme(codeName: "", displayName: "")
+    Bundle(themes: [Theme(codeName: "angryClown", displayName: "Angry Clown")
         ], productID: "com.monochromedev.rating10.DarkPersonsThemeBundle", displayName: "Dark Persons Theme Bundle"
     )
     
