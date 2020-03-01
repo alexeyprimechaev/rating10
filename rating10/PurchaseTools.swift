@@ -16,7 +16,8 @@ func purchaseProduct(_ productName: String) {
         switch result {
         case .success(let purchase):
             print("Purchase Success: \(purchase.productId)")
-            
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: productName)
         case .error(let error):
             switch error.code {
             case .unknown: print("Unknown error. Please contact support")
@@ -56,7 +57,8 @@ func restorePurchases() {
         }
         else if results.restoredPurchases.count > 0 {
             for purchase in results.restoredPurchases {
-                print(purchase.productId)
+                let defaults = UserDefaults.standard
+                defaults.set(true, forKey: purchase.productId)
             }
           //  print("Restore Success: \(results.restoredPurchases)")
         

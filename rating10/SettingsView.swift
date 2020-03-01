@@ -22,18 +22,7 @@ struct SettingsView: View {
             VStack(alignment: .leading, spacing: 0) {
                 
 
-//                    Button(action: {
-//                     productInfo("CapitanUSATheme")
-//                    }) {
-//                        Text("print CapitanUSATheme data")
-//                    }
-//
-//
-//                Button(action: {
-//                 productInfo("CapitanUSATheme")
-//                }) {
-//                    Text("print CapitanUSATheme data")
-//                }
+
 //
 //
 //                Button(action: {
@@ -50,10 +39,28 @@ struct SettingsView: View {
 //                    Text("restore purchases")
 //                }
                 
-              
+              Button(action: {
+                             restorePurchases()
+                             }) {
+                                 Text("restore purchases")
+                             }
+                
                 ForEach(bundles, id: \.self) { bundle in
-                    Text(bundle.displayName)
+                    VStack() {
+                        Text(bundle.displayName)
+                        Text("purchased: " + String(UserDefaults.standard.bool(forKey: bundle.productID)))
+                        Button(action: {
+                        purchaseProduct(bundle.productID)
+                        }) {
+                            Text("purchase")
+                        }
+                        
+                        
+
+                    }
                 }
+                
+               
                 
                 
 //                Text("current theme: " + themes[self.settings.selectedTheme])
