@@ -15,7 +15,7 @@ struct TitleBar: View {
         ZStack {
             Rectangle()
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 52, maxHeight: 52, alignment: .leading)
-                .foregroundColor(Color(themes[self.settings.selectedTheme]+"BackgroundColor"))
+                .foregroundColor(Color(self.settings.selectedTheme+"BackgroundColor"))
          
             
             HStack {
@@ -23,11 +23,11 @@ struct TitleBar: View {
                 HStack {
                     Text("Liked")
                         .fontWeight(.semibold)
-                        .foregroundColor(Color(themes[self.settings.selectedTheme]+"TitleColor"))
+                        .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
                         .opacity(0.5)
                     Text("Ratings")
                         .fontWeight(.semibold)
-                    .foregroundColor(Color(themes[self.settings.selectedTheme]+"TitleColor"))
+                    .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
                     
                         
                 }
@@ -38,7 +38,7 @@ struct TitleBar: View {
                     self.showDetail.toggle()
                 }) {
                     Image(systemName: "circle")
-                        .foregroundColor(Color(themes[self.settings.selectedTheme]+"TitleColor"))
+                        .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
                 }.padding(16)
                 .sheet(isPresented: $showDetail) {
                     SettingsView()

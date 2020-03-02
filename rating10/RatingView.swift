@@ -28,26 +28,26 @@ struct RatingView: View {
                     // Обводка
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 64, maxHeight: 64, alignment: .leading)
-                        .foregroundColor(rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"OutlineCardColor") : Color(themes[self.settings.selectedTheme]+"FillCardColor"))
+                        .foregroundColor(rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"OutlineCardColor") : Color(self.settings.selectedTheme+"FillCardColor"))
 
                     // Заливка
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .padding(2)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 64, alignment: .leading)
-                        .foregroundColor(rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"BackgroundColor") : Color(themes[self.settings.selectedTheme]+"FillCardColor"))
+                        .foregroundColor(rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor") : Color(self.settings.selectedTheme+"FillCardColor"))
 
                     // Текст и Тоггл
                     HStack(spacing: 0) {
                         Text(rating.title)
                             .padding(.leading, 18)
                             .font(.system(size: 17, weight: .semibold, design: .default))
-                        .foregroundColor(rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"OutlineCardTextColor") : Color(themes[self.settings.selectedTheme]+"FillCardTextColor"))
+                        .foregroundColor(rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"OutlineCardTextColor") : Color(self.settings.selectedTheme+"FillCardTextColor"))
                         Spacer()
                     }
             }
         }
         .sheet(isPresented: $showDetail) {
-            RatingDetailView(rating: self.rating).background(self.rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"BackgroundColor") : Color(themes[self.settings.selectedTheme]+"FillModalCardColor"))
+            RatingDetailView(rating: self.rating).background(self.rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor") : Color(self.settings.selectedTheme+"FillModalCardColor"))
             .environmentObject(self.settings)
         }
                     

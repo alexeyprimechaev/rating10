@@ -11,7 +11,8 @@ import Foundation
 
 
 let bundles = [
-    Bundle(themes: [Theme(codeName: "capitanUSA", displayName: "Capitan USA")
+    Bundle(themes: [Theme(codeName: "capitanUSA", displayName: "Capitan USA"),
+                    Theme(codeName: "angryClown", displayName: "Angry Clown")
         ], productID: "com.monochromedev.rating10.WonderPersonsThemeBundle", displayName: "Wonder Persons Theme Bundle"
     ),
     Bundle(themes: [Theme(codeName: "angryClown", displayName: "Angry Clown")

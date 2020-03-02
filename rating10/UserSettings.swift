@@ -8,12 +8,8 @@
 
 import Foundation
 
-let themes = ["default", "capitanUSA", "lgbtqplus", "angryClown"]
-
-//let themes2 = [Theme(name: "default", bundle: "default")]
-
 class UserSettings: ObservableObject {
     var unlockedThemes = [0]
-    @Published var selectedTheme = 0
+    @Published var selectedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? "default"
 }
 

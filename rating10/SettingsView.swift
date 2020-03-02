@@ -51,10 +51,12 @@ struct SettingsView: View {
                         if (UserDefaults.standard.bool(forKey: bundle.productID)) {
                             ForEach(bundle.themes, id: \.self) { theme in
                                 Button(action: {
-                                 //   self.settings.selectedTheme = theme.codeName
+                                 self.settings.selectedTheme = theme.codeName
+                                let defaults = UserDefaults.standard
+                                defaults.set(theme.codeName, forKey: "selectedTheme")
                                     
                                 }) {
-                                    Text("hey")
+                                    Text(theme.displayName)
                                 }
                             }
                         }
@@ -75,7 +77,7 @@ struct SettingsView: View {
                
                 
                 
-//                Text("current theme: " + themes[self.settings.selectedTheme])
+//                Text("current theme: " + self.settings.selectedTheme)
 //                Button(action: {
 //                    if(self.settings.selectedTheme == themes.count-1) {
 //                        self.settings.selectedTheme = 0

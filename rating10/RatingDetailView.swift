@@ -20,7 +20,7 @@ struct RatingDetailView: View {
                 Spacer().frame(height:21)
                 TextField("", text: $rating.title)
                     .titleStyle()
-                    .foregroundColor(rating.rating == Rating.ratings[0] ? Color(themes[self.settings.selectedTheme]+"OutlineCardTextColor") : Color(themes[self.settings.selectedTheme]+"FillCardTextColor"))
+                    .foregroundColor(rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"OutlineCardTextColor") : Color(self.settings.selectedTheme+"FillCardTextColor"))
                     .padding(7)
                 ToggleButton(title: "Rating", values: Rating.ratings, value: $rating.rating)
                 .environmentObject(self.settings)
