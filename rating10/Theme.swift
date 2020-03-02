@@ -22,8 +22,8 @@ let bundles = [
         ], productID: "com.monochromedev.rating10.WonderPersonsThemeBundle", displayName: "Wonder Persons Theme Bundle"
     ),
     Bundle(themes: [Theme(codeName: "angryClown", displayName: "Angry Clown"),
-                    Theme(codeName: "capitanUSA", displayName: "Super Person"),
-                    Theme(codeName: "capitanUSA", displayName: "Female Super Person"),
+                    Theme(codeName: "capitanUSA-1", displayName: "Super Person"),
+                    Theme(codeName: "capitanUSA-2", displayName: "Female Super Person"),
                     Theme(codeName: "greenLighter", displayName: "Green Lighter"),
         ], productID: "com.monochromedev.rating10.DarkPersonsThemeBundle", displayName: "Dark Persons Theme Bundle"
     )
