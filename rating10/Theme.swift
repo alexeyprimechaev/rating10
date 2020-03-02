@@ -10,12 +10,21 @@ import Foundation
 
 
 
+
 let bundles = [
+    Bundle(themes: [Theme(codeName: "default", displayName: "Monochrome"),
+                    Theme(codeName: "brown", displayName: "Govnochrome")
+        ], productID: "defaultBundle", displayName: "Default Themes"
+    ),
     Bundle(themes: [Theme(codeName: "capitanUSA", displayName: "Capitan USA"),
-                    Theme(codeName: "angryClown", displayName: "Angry Clown")
+                    Theme(codeName: "insectPerson", displayName: "Insect Person"),
+                    Theme(codeName: "spaceInsectPerson", displayName: "Space Insect Person")
         ], productID: "com.monochromedev.rating10.WonderPersonsThemeBundle", displayName: "Wonder Persons Theme Bundle"
     ),
-    Bundle(themes: [Theme(codeName: "angryClown", displayName: "Angry Clown")
+    Bundle(themes: [Theme(codeName: "angryClown", displayName: "Angry Clown"),
+                    Theme(codeName: "capitanUSA", displayName: "Super Person"),
+                    Theme(codeName: "capitanUSA", displayName: "Female Super Person"),
+                    Theme(codeName: "greenLighter", displayName: "Green Lighter"),
         ], productID: "com.monochromedev.rating10.DarkPersonsThemeBundle", displayName: "Dark Persons Theme Bundle"
     )
     

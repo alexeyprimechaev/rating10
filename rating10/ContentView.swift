@@ -38,7 +38,12 @@ struct ContentView: View {
             }
         }
         BottomBar()
-    }
+        }.onAppear() {
+            if (UserDefaults.standard.bool(forKey: "defaultBundle") == false) {
+                 UserDefaults.standard.set(true, forKey: "defaultBundle")
+            }
+           
+        }
     }
 }
 
