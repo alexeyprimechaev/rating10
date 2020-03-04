@@ -26,9 +26,9 @@
 		DBA73789240549120073D0F6 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = DBA73788240549120073D0F6 /* SwiftyStoreKit */; };
 		DBA7378B240559100073D0F6 /* PurchaseTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA7378A2405590F0073D0F6 /* PurchaseTools.swift */; };
 		DBFAB8E42407D66C00A94076 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAB8E32407D66C00A94076 /* Theme.swift */; };
-		DBFC09F62410110500C93588 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC09F42410110500C93588 /* SettingsView.swift */; };
-		DBFC09F72410110500C93588 /* RegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC09F52410110500C93588 /* RegularButton.swift */; };
 		DBFC09F9241014D700C93588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFC09F8241014D700C93588 /* Assets.xcassets */; };
+		DBFC09FC2410167A00C93588 /* RegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC09FA2410167900C93588 /* RegularButton.swift */; };
+		DBFC09FD2410167A00C93588 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC09FB2410167900C93588 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +51,9 @@
 		DB915A1724002B7F003CBC49 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		DBA7378A2405590F0073D0F6 /* PurchaseTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTools.swift; sourceTree = "<group>"; };
 		DBFAB8E32407D66C00A94076 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		DBFC09F42410110500C93588 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = ../../SettingsView.swift; sourceTree = "<group>"; };
-		DBFC09F52410110500C93588 /* RegularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegularButton.swift; path = ../../RegularButton.swift; sourceTree = "<group>"; };
 		DBFC09F8241014D700C93588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBFC09FA2410167900C93588 /* RegularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularButton.swift; sourceTree = "<group>"; };
+		DBFC09FB2410167900C93588 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +101,9 @@
 				808C254923FAB0D60070B5F0 /* rating10.xcdatamodeld */,
 				808C255E23FAD14E0070B5F0 /* RatingView.swift */,
 				808C256623FAD8750070B5F0 /* Styles.swift */,
+				DBFC09FA2410167900C93588 /* RegularButton.swift */,
+				DBFC09FB2410167900C93588 /* SettingsView.swift */,
 				808C256223FAD6A70070B5F0 /* RatingDetailView.swift */,
-				DBFC09F52410110500C93588 /* RegularButton.swift */,
-				DBFC09F42410110500C93588 /* SettingsView.swift */,
 				DBA7378A2405590F0073D0F6 /* PurchaseTools.swift */,
 				808C255C23FAB1160070B5F0 /* Rating.swift */,
 				808C256023FAD39F0070B5F0 /* Toggle.swift */,
@@ -203,17 +203,17 @@
 				808C256123FAD39F0070B5F0 /* Toggle.swift in Sources */,
 				808C256723FAD8750070B5F0 /* Styles.swift in Sources */,
 				808C254623FAB0D60070B5F0 /* AppDelegate.swift in Sources */,
-				DBFC09F62410110500C93588 /* SettingsView.swift in Sources */,
 				808C254823FAB0D60070B5F0 /* SceneDelegate.swift in Sources */,
 				DB636ED824013F1000EA9732 /* TitleBar.swift in Sources */,
+				DBFC09FD2410167A00C93588 /* SettingsView.swift in Sources */,
 				808C255D23FAB1160070B5F0 /* Rating.swift in Sources */,
 				DBA7378B240559100073D0F6 /* PurchaseTools.swift in Sources */,
 				808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */,
-				DBFC09F72410110500C93588 /* RegularButton.swift in Sources */,
 				DBFAB8E42407D66C00A94076 /* Theme.swift in Sources */,
 				808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */,
 				808C255F23FAD14E0070B5F0 /* RatingView.swift in Sources */,
 				808C254D23FAB0D60070B5F0 /* ContentView.swift in Sources */,
+				DBFC09FC2410167A00C93588 /* RegularButton.swift in Sources */,
 				DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */,
 				808C254B23FAB0D60070B5F0 /* rating10.xcdatamodeld in Sources */,
 				DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */,
