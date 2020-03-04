@@ -21,53 +21,44 @@ struct SettingsView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 
-                
-
-            
-            Button(action: {
-                            restorePurchases()
-                            }) {
-                                Text("restore purchases")
-                            }
             ForEach(bundles, id: \.self) { bundle in
-                    VStack() {
-                        Text(bundle.displayName)
-                        if (UserDefaults.standard.bool(forKey: bundle.productID)) {
-                            ForEach(bundle.themes, id: \.self) { theme in
-                                Button(action: {
-                                 self.settings.selectedTheme = theme.codeName
+                HStack() {
+                VStack(alignment: .leading) {
+                    RegularButton(title: bundle.displayName, icon: (UserDefaults.standard.bool(forKey: bundle.productID)) ? "lock.open" : "lock.fill" , subtitle: (UserDefaults.standard.bool(forKey: bundle.productID)) ? "Purchased" : "Purchase", isActive: (UserDefaults.standard.bool(forKey: bundle.productID)), action: {purchaseProduct(bundle.productID)})
+                        ForEach(bundle.themes, id: \.self) { theme in
+                            ThemeView(imageName: "", title: theme.displayName, theme: theme, action: {
+                                self.settings.selectedTheme = theme.codeName
                                 let defaults = UserDefaults.standard
                                 defaults.set(theme.codeName, forKey: "selectedTheme")
-                                    
-                                }) {
-                                    Text(theme.displayName)
-                                }
-                            }
+                            })
+                            
                         }
-                        else {
-                            Button(action: {
-                            purchaseProduct(bundle.productID)
-                            }) {
-                                Text("purchase")
-                            }
+                        if (UserDefaults.standard.bool(forKey: bundle.productID)) {
+                            
                         }
+
                         
                         
                         
 
-                    }
+                }
+                .padding(.leading, 21)
+                .padding(.bottom, 14)
+                    Spacer()
+                }
+
                 }
                 
-                RegularButton(title: "Name", icon: "lock.fill", subtitle: "Purchase", isActive: false, action: {})
+               
                 
                
                 
                 
              
                 
-        }
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             
-    }
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         
 }
 

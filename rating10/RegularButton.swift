@@ -32,18 +32,19 @@ struct RegularButton: View {
         {
             HStack(alignment: .bottom, spacing: 7) {
                 Text(title)
-                    .titleStyle()
                     .opacity(isActive ? 1 : 0.5)
-                HStack {
+                    .font(.system(size: 28, weight: .bold))
+                    .fixedSize()
+                HStack(spacing: 4) {
                     Image(systemName: icon)
                     .padding(.bottom, 2)
-                    Text(subtitle)
+                    Text(subtitle).fixedSize()
                         
                 }
-                .padding(.bottom, 5)
+                .padding(.bottom, 4)
                 .opacity(isActive ? 0.5 : 1)
-                .smallTitleStyle()
-                .frame(width: 100)
+                .font(.system(size: 14, weight: .semibold))
+                
                     
             }
         }

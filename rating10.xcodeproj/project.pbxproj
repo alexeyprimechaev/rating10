@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8057CEF3241019EC000D452A /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057CEF2241019EC000D452A /* ThemeView.swift */; };
+		8057CEF524102446000D452A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8057CEF424102445000D452A /* Assets.xcassets */; };
 		808C254623FAB0D60070B5F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C254523FAB0D60070B5F0 /* AppDelegate.swift */; };
 		808C254823FAB0D60070B5F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C254723FAB0D60070B5F0 /* SceneDelegate.swift */; };
 		808C254B23FAB0D60070B5F0 /* rating10.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 808C254923FAB0D60070B5F0 /* rating10.xcdatamodeld */; };
@@ -26,12 +28,13 @@
 		DBA73789240549120073D0F6 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = DBA73788240549120073D0F6 /* SwiftyStoreKit */; };
 		DBA7378B240559100073D0F6 /* PurchaseTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA7378A2405590F0073D0F6 /* PurchaseTools.swift */; };
 		DBFAB8E42407D66C00A94076 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFAB8E32407D66C00A94076 /* Theme.swift */; };
-		DBFC09F9241014D700C93588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFC09F8241014D700C93588 /* Assets.xcassets */; };
 		DBFC09FC2410167A00C93588 /* RegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC09FA2410167900C93588 /* RegularButton.swift */; };
 		DBFC09FD2410167A00C93588 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC09FB2410167900C93588 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8057CEF2241019EC000D452A /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		8057CEF424102445000D452A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		808C254223FAB0D60070B5F0 /* rating10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rating10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		808C254523FAB0D60070B5F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		808C254723FAB0D60070B5F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +54,6 @@
 		DB915A1724002B7F003CBC49 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		DBA7378A2405590F0073D0F6 /* PurchaseTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTools.swift; sourceTree = "<group>"; };
 		DBFAB8E32407D66C00A94076 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		DBFC09F8241014D700C93588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBFC09FA2410167900C93588 /* RegularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularButton.swift; sourceTree = "<group>"; };
 		DBFC09FB2410167900C93588 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,13 +99,14 @@
 				DBFAB8E32407D66C00A94076 /* Theme.swift */,
 				808C255323FAB0D90070B5F0 /* LaunchScreen.storyboard */,
 				808C255623FAB0D90070B5F0 /* Info.plist */,
-				DBFC09F8241014D700C93588 /* Assets.xcassets */,
 				808C254923FAB0D60070B5F0 /* rating10.xcdatamodeld */,
+				8057CEF424102445000D452A /* Assets.xcassets */,
 				808C255E23FAD14E0070B5F0 /* RatingView.swift */,
 				808C256623FAD8750070B5F0 /* Styles.swift */,
 				DBFC09FA2410167900C93588 /* RegularButton.swift */,
 				DBFC09FB2410167900C93588 /* SettingsView.swift */,
 				808C256223FAD6A70070B5F0 /* RatingDetailView.swift */,
+				8057CEF2241019EC000D452A /* ThemeView.swift */,
 				DBA7378A2405590F0073D0F6 /* PurchaseTools.swift */,
 				808C255C23FAB1160070B5F0 /* Rating.swift */,
 				808C256023FAD39F0070B5F0 /* Toggle.swift */,
@@ -188,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				808C255523FAB0D90070B5F0 /* LaunchScreen.storyboard in Resources */,
-				DBFC09F9241014D700C93588 /* Assets.xcassets in Resources */,
+				8057CEF524102446000D452A /* Assets.xcassets in Resources */,
 				808C255223FAB0D90070B5F0 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +219,7 @@
 				DBFC09FC2410167A00C93588 /* RegularButton.swift in Sources */,
 				DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */,
 				808C254B23FAB0D60070B5F0 /* rating10.xcdatamodeld in Sources */,
+				8057CEF3241019EC000D452A /* ThemeView.swift in Sources */,
 				DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
