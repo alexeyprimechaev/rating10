@@ -45,9 +45,12 @@ struct RatingView: View {
                         Spacer()
                     }
             }
-        }
+        }.buttonStyle(DeepButtonStyle())
         .sheet(isPresented: $showDetail) {
-            RatingDetailView(rating: self.rating).background(self.rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor") : Color(self.settings.selectedTheme+"FillModalCardColor"))
+            RatingDetailView(rating: self.rating, action: {
+                self.managedObjectContext.delete(self.rating)
+                self.showDetail.toggle()
+            }).background(self.rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all) : Color(self.settings.selectedTheme+"FillModalCardColor").edgesIgnoringSafeArea(.all))
             .environmentObject(self.settings)
         }
                     

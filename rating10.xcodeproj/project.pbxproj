@@ -20,6 +20,8 @@
 		808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256223FAD6A70070B5F0 /* RatingDetailView.swift */; };
 		808C256523FAD83B0070B5F0 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256423FAD83B0070B5F0 /* ToggleButton.swift */; };
 		808C256723FAD8750070B5F0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C256623FAD8750070B5F0 /* Styles.swift */; };
+		80C031DB240FCCCE00743F60 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 80C031DA240FCCCE00743F60 /* Introspect */; };
+		80C031DD240FDA7800743F60 /* RegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C031DC240FDA7800743F60 /* RegularButton.swift */; };
 		DB636ED824013F1000EA9732 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED724013F1000EA9732 /* TitleBar.swift */; };
 		DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED924013F3500EA9732 /* BottomBar.swift */; };
 		DB636EDC2401542C00EA9732 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636EDB2401542C00EA9732 /* SettingsView.swift */; };
@@ -45,6 +47,7 @@
 		808C256223FAD6A70070B5F0 /* RatingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingDetailView.swift; sourceTree = "<group>"; };
 		808C256423FAD83B0070B5F0 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		808C256623FAD8750070B5F0 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		80C031DC240FDA7800743F60 /* RegularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularButton.swift; sourceTree = "<group>"; };
 		DB636ED724013F1000EA9732 /* TitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBar.swift; sourceTree = "<group>"; };
 		DB636ED924013F3500EA9732 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		DB636EDB2401542C00EA9732 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA73789240549120073D0F6 /* SwiftyStoreKit in Frameworks */,
+				80C031DB240FCCCE00743F60 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,7 @@
 				808C255C23FAB1160070B5F0 /* Rating.swift */,
 				808C256023FAD39F0070B5F0 /* Toggle.swift */,
 				808C256423FAD83B0070B5F0 /* ToggleButton.swift */,
+				80C031DC240FDA7800743F60 /* RegularButton.swift */,
 				808C255023FAB0D90070B5F0 /* Preview Content */,
 			);
 			path = rating10;
@@ -134,6 +139,7 @@
 			name = rating10;
 			packageProductDependencies = (
 				DBA73788240549120073D0F6 /* SwiftyStoreKit */,
+				80C031DA240FCCCE00743F60 /* Introspect */,
 			);
 			productName = rating10;
 			productReference = 808C254223FAB0D60070B5F0 /* rating10.app */;
@@ -165,6 +171,7 @@
 			mainGroup = 808C253923FAB0D60070B5F0;
 			packageReferences = (
 				DBA73787240549120073D0F6 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				80C031D9240FCCCD00743F60 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 808C254323FAB0D60070B5F0 /* Products */;
 			projectDirPath = "";
@@ -206,6 +213,7 @@
 				808C256323FAD6A70070B5F0 /* RatingDetailView.swift in Sources */,
 				808C255F23FAD14E0070B5F0 /* RatingView.swift in Sources */,
 				808C254D23FAB0D60070B5F0 /* ContentView.swift in Sources */,
+				80C031DD240FDA7800743F60 /* RegularButton.swift in Sources */,
 				DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */,
 				808C254B23FAB0D60070B5F0 /* rating10.xcdatamodeld in Sources */,
 				DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */,
@@ -404,6 +412,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		80C031D9240FCCCD00743F60 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 		DBA73787240549120073D0F6 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
@@ -415,6 +431,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		80C031DA240FCCCE00743F60 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80C031D9240FCCCD00743F60 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
 		DBA73788240549120073D0F6 /* SwiftyStoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DBA73787240549120073D0F6 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;

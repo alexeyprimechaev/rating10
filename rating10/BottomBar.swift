@@ -14,11 +14,13 @@ struct BottomBar: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Rating.getAllRatings()) var ratings:FetchedResults<Rating>
     
+    @State var isPresening = false
+    
     var body: some View {
         HStack {
             Button(action: {
                 let rating = Rating(context: self.managedObjectContext)
-                rating.title = "Wow"
+                rating.title = ""
                 rating.rating = Rating.ratings[0]
                 rating.createdAt = Date()
 
@@ -27,6 +29,7 @@ struct BottomBar: View {
                 } catch {
                     print(error)
                 }
+                self.isPresening = true
             }) {
                 HStack {
                 Image(systemName: "plus")
@@ -37,6 +40,13 @@ struct BottomBar: View {
                 }
             }.padding(16)
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 52, maxHeight: 52, alignment: .center).background(Color(self.settings.selectedTheme+"BackgroundColor"))
+            .sheet(isPresented: $isPresening) {
+                RatingDetailView(rating: self.ratings[0], action: {
+                    self.managedObjectContext.delete(self.ratings[0])
+                    self.isPresening.toggle()
+                }).background(self.ratings[0].rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all) : Color(self.settings.selectedTheme+"FillModalCardColor").edgesIgnoringSafeArea(.all))
+                .environmentObject(self.settings)
+        }
     
         
             

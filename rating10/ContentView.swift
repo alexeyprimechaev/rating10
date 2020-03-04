@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
+    
+    @EnvironmentObject var settings: UserSettings
   
     @FetchRequest(fetchRequest: Rating.getAllRatings()) var ratings:FetchedResults<Rating>
   
@@ -20,28 +22,17 @@ struct ContentView: View {
         TitleBar() 
         List() {
             ForEach(ratings) { rating in
-                RatingView(rating: rating)
-            }
-            Button(action: {
-                let rating = Rating(context: self.managedObjectContext)
-                rating.title = "Wow"
-                rating.rating = Rating.ratings[0]
-                rating.createdAt = Date()
-
-                do {
-                    try self.managedObjectContext.save()
-                } catch {
-                    print(error)
-                }
-            }) {
-                Text("Add")
-            }
-        }
+                RatingView(rating: rating).listRowBackground(Color(self.settings.selectedTheme+"BackgroundColor"))
+            }.background(Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all))
+            }.background(Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all))
         BottomBar()
-        }.onAppear() {
+        }.background(Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all))
+            
+        .onAppear() {
             if (UserDefaults.standard.bool(forKey: "defaultBundle") == false) {
                  UserDefaults.standard.set(true, forKey: "defaultBundle")
             }
+            
            
         }
     }
