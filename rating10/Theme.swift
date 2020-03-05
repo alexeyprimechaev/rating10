@@ -22,12 +22,10 @@ let bundles = [
                     Theme(codeName: "spaceFox", displayName: "Space Fox")
         ], productID: "com.monochromedev.rating10.WonderPersonsThemeBundle", displayName: "Wonder Persons"
     ),
-    Bundle(themes: [Theme(codeName: "spaceWarrior", displayName: "Space Female Warrior"),
+    Bundle(themes: [Theme(codeName: "majorWonder", displayName: "Major Wonder"),
                     Theme(codeName: "muscleWoman", displayName: "Muscle Woman"),
                     Theme(codeName: "insectWoman", displayName: "Insect Woman"),
-                    Theme(codeName: "kbgAgent", displayName: "KBG Agentess"),
-                    Theme(codeName: "majorWonder", displayName: "Major Wonder"),
-                    Theme(codeName: "tigerLady", displayName: "Tiger Lady")
+                    Theme(codeName: "kbgAgent", displayName: "KBG Agentess")
         ], productID: "com.monochromedev.rating10.SuperiorWomenThemeBundle", displayName: "Superior Women"
     ),
     

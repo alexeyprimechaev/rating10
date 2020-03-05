@@ -24,8 +24,8 @@ struct ThemeView: View {
             HStack(spacing: 14) {
                  ZStack(alignment: .center) {
                     Circle().frame(width: 38, height: 38).foregroundColor(Color(theme.codeName+"OutlineCardTextColor"))
-                    Circle().frame(width: 30, height: 30).foregroundColor(Color(theme.codeName+"FillCardColor"))
-                                   Circle().frame(width: 22, height: 22).foregroundColor(Color(theme.codeName+"BackgroundColor"))
+                    Circle().frame(width: 30, height: 30).foregroundColor(Color(theme.codeName+"BackgroundColor"))
+                                   Circle().frame(width: 22, height: 22).foregroundColor(Color(theme.codeName+"FillCardColor"))
                                    Circle().frame(width: 14, height: 14).foregroundColor(Color(theme.codeName+"TitleColor"))
                                }
                 Text(title).smallTitleStyle()
