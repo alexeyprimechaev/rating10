@@ -37,8 +37,13 @@ struct TitleBar: View {
                 Button(action: {
                     self.showDetail.toggle()
                 }) {
-                    Image(systemName: "circle")
-                        .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
+                    ZStack(alignment: .center) {
+                    Circle().frame(width: 24, height: 38).foregroundColor(Color(self.settings.selectedTheme+"OutlineCardTextColor"))
+                    Circle().frame(width: 18, height: 30).foregroundColor(Color(self.settings.selectedTheme+"BackgroundColor"))
+                                   Circle().frame(width: 12, height: 22).foregroundColor(Color(self.settings.selectedTheme+"FillCardColor"))
+                                   Circle().frame(width: 6, height: 14).foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
+                               }
+                    
                 }.padding(16)
                 .sheet(isPresented: $showDetail) {
                     SettingsView()
