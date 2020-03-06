@@ -35,6 +35,25 @@ struct RatingDetailView: View {
                 ToggleButton(title: "Rating", values: Rating.ratings, value: $rating.rating)
                 .environmentObject(self.settings)
                 
+                RegularButton(title: "Tweet") {
+                    let tweetText = "your text"
+                    let appURL = "yandex.ru"
+
+                    let shareString = "https://twitter.com/intent/tweet?text=\(tweetText)&url=\(appURL)"
+
+                    // encode a space to %20 for example
+                    let escapedShareString = shareString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+
+                    // cast to an url
+                    let url = URL(string: escapedShareString)
+
+                    // open in safari
+                    UIApplication.shared.openURL(url!)
+                }
+                .foregroundColor(self.rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"OutlineCardTextColor") : Color(self.settings.selectedTheme+"FillCardTextColor"))
+                    
+                
+                
                 RegularButton(title: "Delete") {
                     self.action()
                 }.environmentObject(self.settings)
