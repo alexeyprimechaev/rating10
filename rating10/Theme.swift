@@ -61,12 +61,12 @@ let bundles = [
         ], productID: "com.monochromedev.rating10.BricksThemeBundle", displayName: "Bricks"
     ),
     
-    Bundle(themes: [Theme(codeName: "strawberryYoghurt", displayName: "Strawberry Yoghurt"),
-                    Theme(codeName: "cherryYoghurt", displayName: "Cherry Yoghurt"),
-                    Theme(codeName: "blueberryYoghurt", displayName: "Blueberry Yoghurt"),
-                    Theme(codeName: "naturalYoghurt", displayName: "Natural Yoghurt"),
-                    Theme(codeName: "raspberryYoghurt", displayName: "Raspberry Yoghurt")
-        ], productID: "com.monochromedev.rating10.YoghurtsThemeBundle", displayName: "Yoghurts"
+    Bundle(themes: [Theme(codeName: "strawberryYoghurt", displayName: "Strawberry Yogurt"),
+                    Theme(codeName: "cherryYoghurt", displayName: "Cherry Yogurt"),
+                    Theme(codeName: "blueberryYoghurt", displayName: "Blueberry Yogurt"),
+                    Theme(codeName: "naturalYoghurt", displayName: "Natural Yogurt"),
+                    Theme(codeName: "raspberryYoghurt", displayName: "Raspberry Yogurt")
+        ], productID: "com.monochromedev.rating10.YoghurtsThemeBundle", displayName: "Yogurts"
     ),
     
     Bundle(themes: [Theme(codeName: "clearWater", displayName: "Clear Water"),
@@ -77,8 +77,7 @@ let bundles = [
     
     Bundle(themes: [Theme(codeName: "darkSoda", displayName: "Dark Soda"),
                     Theme(codeName: "greenSoda", displayName: "Green Soda"),
-                    Theme(codeName: "orangeSoda", displayName: "Orange Soda"),
-                    Theme(codeName: "greenLighter", displayName: "Green Lighter"),
+                    Theme(codeName: "orangeSoda", displayName: "Orange Soda")
         ], productID: "com.monochromedev.rating10.SodasThemeBundle", displayName: "Sodas"
     )
     
