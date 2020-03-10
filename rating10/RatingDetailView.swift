@@ -36,8 +36,8 @@ struct RatingDetailView: View {
                 .environmentObject(self.settings)
                 
                 RegularButton(title: "Tweet") {
-                    let tweetText = "your text"
-                    let appURL = "yandex.ru"
+                    let tweetText = "I think " + self.rating.title + " is " + self.rating.rating + ". \n\nDownload Rating 10:"
+                    let appURL = "number16.github.io/r10.html"
 
                     let shareString = "https://twitter.com/intent/tweet?text=\(tweetText)&url=\(appURL)"
 
