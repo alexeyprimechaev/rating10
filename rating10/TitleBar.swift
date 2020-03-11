@@ -21,41 +21,31 @@ struct TitleBar: View {
             HStack {
                 Spacer()
                 HStack {
-                    if (self.settings.isInLikedMode) {
-                        Button(action: {
-                                               self.settings.isInLikedMode = true
-                                           }) {
-                                           Text("Liked")
-                                               .fontWeight(.semibold)
-                                               .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
-                                                }
-                                           Button(action: {
-                                               self.settings.isInLikedMode = false
-                                           }) {
-                                           Text("Ratings")
-                                               .fontWeight(.semibold)
-                                           .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
-                                            .opacity(0.5)
-                                           }
-                    } else {
-                        Button(action: {
-                                               self.settings.isInLikedMode = true
-                                           }) {
-                                           Text("Liked")
-                                               .fontWeight(.semibold)
-                                               .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
-                                               .opacity(0.5) }
-                                           Button(action: {
-                                               self.settings.isInLikedMode = false
-                                           }) {
-                                           Text("Ratings")
-                                               .fontWeight(.semibold)
-                                           .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
-                                           }
+                    if self.settings.isInLikedMode {
+                        Text("Ratings").foregroundColor(.clear)
+                        Text("Liked").foregroundColor(.clear)
                     }
+                    
+                        Button(action: {
+                            self.settings.isInLikedMode = true
+                        }) {
+                            Text("Liked")
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
+                                .opacity(self.settings.isInLikedMode ? 1: 0.5)
+                        }
+                        Button(action: {
+                            self.settings.isInLikedMode = false
+                        }) {
+                            Text("Ratings")
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
+                                .opacity(self.settings.isInLikedMode ? 0.5: 1)
+                                           }
+                    
                    
                         
-                }
+                }.animation(.default)
                 Spacer()
                 
                 
