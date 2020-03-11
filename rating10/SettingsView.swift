@@ -32,10 +32,8 @@ struct SettingsView: View {
                                 defaults.set(theme.codeName, forKey: "selectedTheme")
                             })
                             
-                        }
-                        if (UserDefaults.standard.bool(forKey: bundle.productID)) {
-                            
-                        }
+                    }.disabled(!UserDefaults.standard.bool(forKey: bundle.productID))
+
 
                         
                         
