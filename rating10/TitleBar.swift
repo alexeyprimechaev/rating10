@@ -21,14 +21,39 @@ struct TitleBar: View {
             HStack {
                 Spacer()
                 HStack {
-                    Text("Liked")
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
-                        .opacity(0.5)
-                    Text("Ratings")
-                        .fontWeight(.semibold)
-                    .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
-                    
+                    if (self.settings.isInLikedMode) {
+                        Button(action: {
+                                               self.settings.isInLikedMode = true
+                                           }) {
+                                           Text("Liked")
+                                               .fontWeight(.semibold)
+                                               .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
+                                                }
+                                           Button(action: {
+                                               self.settings.isInLikedMode = false
+                                           }) {
+                                           Text("Ratings")
+                                               .fontWeight(.semibold)
+                                           .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
+                                            .opacity(0.5)
+                                           }
+                    } else {
+                        Button(action: {
+                                               self.settings.isInLikedMode = true
+                                           }) {
+                                           Text("Liked")
+                                               .fontWeight(.semibold)
+                                               .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
+                                               .opacity(0.5) }
+                                           Button(action: {
+                                               self.settings.isInLikedMode = false
+                                           }) {
+                                           Text("Ratings")
+                                               .fontWeight(.semibold)
+                                           .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
+                                           }
+                    }
+                   
                         
                 }
                 Spacer()

@@ -11,5 +11,6 @@ import Foundation
 class UserSettings: ObservableObject {
     var unlockedThemes = [0]
     @Published var selectedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? "default"
+    @Published var isInLikedMode = false
 }
 

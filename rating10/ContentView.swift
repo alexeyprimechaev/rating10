@@ -22,7 +22,15 @@ struct ContentView: View {
         TitleBar() 
         List() {
             ForEach(ratings) { rating in
-                RatingView(rating: rating).listRowBackground(Color(self.settings.selectedTheme+"BackgroundColor"))
+                if (self.settings.isInLikedMode) {
+                    if (rating.rating == Rating.ratings[0]) {
+                        RatingView(rating: rating).listRowBackground(Color(self.settings.selectedTheme+"BackgroundColor"))
+                    }
+                } else {
+                    RatingView(rating: rating).listRowBackground(Color(self.settings.selectedTheme+"BackgroundColor"))
+                }
+                
+                
             }.background(Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all))
             }.background(Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all))
         BottomBar()
