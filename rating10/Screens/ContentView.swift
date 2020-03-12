@@ -15,7 +15,7 @@ struct ContentView: View {
     @EnvironmentObject var settings: UserSettings
   
     @FetchRequest(fetchRequest: Rating.getAllRatings()) var ratings:FetchedResults<Rating>
-  
+
     
     var body: some View {
         VStack(spacing: 0) {

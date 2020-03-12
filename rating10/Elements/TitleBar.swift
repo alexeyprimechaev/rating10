@@ -10,7 +10,11 @@ import SwiftUI
 
 struct TitleBar: View {
     @EnvironmentObject var settings: UserSettings
-    @State var showDetail = false
+    
+    @State var selectedBundle = bundles[0]
+    
+    @State var showSettings = false
+    @State var kalSheet = false
     var body: some View {
         ZStack {
             Rectangle()
@@ -41,6 +45,9 @@ struct TitleBar: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
                                 .opacity(self.settings.isInLikedMode ? 0.5: 1)
+                                           }.sheet(isPresented: $kalSheet) {
+                                               Text("kall")
+                                               .environmentObject(self.settings)
                                            }
                     
                    
@@ -50,7 +57,7 @@ struct TitleBar: View {
                 
                 
                 Button(action: {
-                    self.showDetail.toggle()
+                    self.showSettings.toggle()
                 }) {
                     ZStack(alignment: .center) {
                     Circle().frame(width: 24, height: 38).foregroundColor(Color(self.settings.selectedTheme+"OutlineCardTextColor"))
@@ -60,8 +67,8 @@ struct TitleBar: View {
                                }
                     
                 }.padding(16)
-                .sheet(isPresented: $showDetail) {
-                    SettingsView(dismiss: {self.showDetail = false})
+                .sheet(isPresented: $showSettings) {
+                    SettingsView(selectedBundle: self.$selectedBundle, showKalSheet: self.$kalSheet, dismiss: {self.showSettings = false})
                     .environmentObject(self.settings)
                 }
             }
