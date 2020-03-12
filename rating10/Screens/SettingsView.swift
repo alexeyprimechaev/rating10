@@ -48,6 +48,8 @@ struct SettingsView: View {
                                 
                             })
                             
+                        }.onTapGesture {
+                            self.purchaseProduct(bundle: bundle)
                     }
 
                 }

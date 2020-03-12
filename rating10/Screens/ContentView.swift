@@ -24,7 +24,7 @@ struct ContentView: View {
         List() {
             ForEach(ratings) { rating in
                 if (self.settings.isInLikedMode) {
-                    if (rating.rating == Rating.ratings[0]) {
+                    if (rating.rating == Rating.ratings[1]) {
                         RatingView(rating: rating).listRowBackground(Color(self.settings.selectedTheme+"BackgroundColor")).listRowInsets(EdgeInsets(top: 7, leading: 14, bottom: 7, trailing: 14))
                     }
                 } else {

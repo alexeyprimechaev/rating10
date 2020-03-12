@@ -67,17 +67,7 @@ struct TitleBar: View {
                                }
                     
                 }.padding(16)
-                    Button(action: {
-                                       self.kalSheet.toggle()
-                                   }) {
-                                       ZStack(alignment: .center) {
-                                       Circle().frame(width: 24, height: 38).foregroundColor(Color(self.settings.selectedTheme+"OutlineCardTextColor"))
-                                       Circle().frame(width: 18, height: 30).foregroundColor(Color(self.settings.selectedTheme+"BackgroundColor"))
-                                                      Circle().frame(width: 12, height: 22).foregroundColor(Color(self.settings.selectedTheme+"FillCardColor"))
-                                                      Circle().frame(width: 6, height: 14).foregroundColor(Color(self.settings.selectedTheme+"TitleColor"))
-                                                  }
-                                       
-                                   }.padding(16)
+
                 .sheet(isPresented: $showSettings) {
                     SettingsView(selectedBundle: self.$selectedBundle, showKalSheet: self.$kalSheet, dismiss: {self.showSettings = false})
                     .environmentObject(self.settings)

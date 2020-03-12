@@ -14,7 +14,7 @@ public class Rating: NSManagedObject, Identifiable {
     @NSManaged public var titleStored: String?
     @NSManaged public var ratingStored: String?
     
-    static let ratings = ["Good", "Bad"]
+    static let ratings = ["Bad", "Good"]
 }
 
 extension Rating {
