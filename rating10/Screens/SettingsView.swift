@@ -30,13 +30,15 @@ struct SettingsView: View {
                             ThemeView(imageName: "", title: theme.displayName, theme: theme, productID: bundle.productID, action: {
                                 if UserDefaults.standard.bool(forKey: bundle.productID) {
                                     self.settings.selectedTheme = theme.codeName
+                                    let defaults = UserDefaults.standard
+                                    defaults.set(theme.codeName, forKey: "selectedTheme")
                                 } else {
                                     purchaseProduct(bundle.productID)
+                                    
 
                                 }
                                 
-                                let defaults = UserDefaults.standard
-                                defaults.set(theme.codeName, forKey: "selectedTheme")
+                                
                             })
                             
                     }
