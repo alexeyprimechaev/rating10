@@ -23,6 +23,7 @@
 		80C031DB240FCCCE00743F60 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 80C031DA240FCCCE00743F60 /* Introspect */; };
 		80EC1D28241A4EC900D46B2A /* HeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EC1D27241A4EC900D46B2A /* HeaderBar.swift */; };
 		80FF5356241A838A007D16B9 /* KalSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF5355241A838A007D16B9 /* KalSheet.swift */; };
+		80FF5359241A909E007D16B9 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 80FF5358241A909E007D16B9 /* ASCollectionView */; };
 		DB636ED824013F1000EA9732 /* TitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED724013F1000EA9732 /* TitleBar.swift */; };
 		DB636EDA24013F3500EA9732 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB636ED924013F3500EA9732 /* BottomBar.swift */; };
 		DB915A1824002B7F003CBC49 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB915A1724002B7F003CBC49 /* UserSettings.swift */; };
@@ -66,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA73789240549120073D0F6 /* SwiftyStoreKit in Frameworks */,
+				80FF5359241A909E007D16B9 /* ASCollectionView in Frameworks */,
 				80C031DB240FCCCE00743F60 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +180,7 @@
 			packageProductDependencies = (
 				DBA73788240549120073D0F6 /* SwiftyStoreKit */,
 				80C031DA240FCCCE00743F60 /* Introspect */,
+				80FF5358241A909E007D16B9 /* ASCollectionView */,
 			);
 			productName = rating10;
 			productReference = 808C254223FAB0D60070B5F0 /* rating10.app */;
@@ -210,6 +213,7 @@
 			packageReferences = (
 				DBA73787240549120073D0F6 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
 				80C031D9240FCCCD00743F60 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				80FF5357241A909E007D16B9 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
 			);
 			productRefGroup = 808C254323FAB0D60070B5F0 /* Products */;
 			projectDirPath = "";
@@ -460,6 +464,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		80FF5357241A909E007D16B9 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.1;
+			};
+		};
 		DBA73787240549120073D0F6 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
@@ -475,6 +487,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 80C031D9240FCCCD00743F60 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		80FF5358241A909E007D16B9 /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80FF5357241A909E007D16B9 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
 		};
 		DBA73788240549120073D0F6 /* SwiftyStoreKit */ = {
 			isa = XCSwiftPackageProductDependency;

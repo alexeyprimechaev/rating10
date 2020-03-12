@@ -38,7 +38,7 @@ struct ThemeView: View {
                                }
                 Text(title).smallTitleStyle().opacity(UserDefaults.standard.bool(forKey: productID) ? 1: 0.5)
             }
-        }.buttonStyle(DeepButtonStyle())
+            }.padding(7).buttonStyle(DeepButtonStyle())
     }
 }
 
