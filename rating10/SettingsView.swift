@@ -14,30 +14,32 @@ import SwiftyStoreKit
 
 struct SettingsView: View {
     
-     @EnvironmentObject var settings: UserSettings
-
+    @EnvironmentObject var settings: UserSettings
+    
+    var dismiss: () -> ()
     
     var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HeaderBar(leadingAction: {self.dismiss()}, leadingTitle: "Dismiss", leadingIcon: "xmark", trailingAction: {})
         ScrollView {
-            VStack(alignment: .leading, spacing: 0) {
-                
             ForEach(bundles, id: \.self) { bundle in
                 HStack() {
                 VStack(alignment: .leading) {
                     RegularButton(title: bundle.displayName, icon: (UserDefaults.standard.bool(forKey: bundle.productID)) ? "lock.open" : "lock.fill" , subtitle: (UserDefaults.standard.bool(forKey: bundle.productID)) ? "Purchased" : "Purchase", isActive: (UserDefaults.standard.bool(forKey: bundle.productID)), action: {purchaseProduct(bundle.productID)})
                         ForEach(bundle.themes, id: \.self) { theme in
-                            ThemeView(imageName: "", title: theme.displayName, theme: theme, action: {
-                                self.settings.selectedTheme = theme.codeName
+                            ThemeView(imageName: "", title: theme.displayName, theme: theme, productID: bundle.productID, action: {
+                                if UserDefaults.standard.bool(forKey: bundle.productID) {
+                                    self.settings.selectedTheme = theme.codeName
+                                } else {
+                                    purchaseProduct(bundle.productID)
+
+                                }
+                                
                                 let defaults = UserDefaults.standard
                                 defaults.set(theme.codeName, forKey: "selectedTheme")
                             })
                             
-                    }.disabled(!UserDefaults.standard.bool(forKey: bundle.productID))
-
-
-                        
-                        
-                        
+                    }
 
                 }
                 .padding(.leading, 21)

@@ -15,6 +15,8 @@ struct ThemeView: View {
     
     @State var theme: Theme
     
+    @State var productID = String()
+    
     var action: () -> ()
     
     var body: some View {
@@ -28,7 +30,7 @@ struct ThemeView: View {
                                    Circle().frame(width: 22, height: 22).foregroundColor(Color(theme.codeName+"FillCardColor"))
                                    Circle().frame(width: 14, height: 14).foregroundColor(Color(theme.codeName+"TitleColor"))
                                }
-                Text(title).smallTitleStyle()
+                Text(title).smallTitleStyle().opacity(UserDefaults.standard.bool(forKey: productID) ? 1: 0.5)
             }
         }.buttonStyle(DeepButtonStyle())
     }

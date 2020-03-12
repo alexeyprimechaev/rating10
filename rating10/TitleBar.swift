@@ -61,7 +61,7 @@ struct TitleBar: View {
                     
                 }.padding(16)
                 .sheet(isPresented: $showDetail) {
-                    SettingsView()
+                    SettingsView(dismiss: {self.showDetail = false})
                     .environmentObject(self.settings)
                 }
             }
