@@ -41,11 +41,15 @@ struct BottomBar: View {
                 }
             }.padding(16)
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 52, maxHeight: 52, alignment: .center).background(Color(self.settings.selectedTheme+"BackgroundColor"))
-            .sheet(isPresented: $isPresening) {
+            .sheet(isPresented: $isPresening, onDismiss: {
+                if self.ratings[0].title == "" {
+                    self.managedObjectContext.delete( self.ratings[0])
+                }
+            }) {
                 RatingDetailView(rating: self.ratings[0], action: {
                     self.managedObjectContext.delete(self.ratings[0])
                     self.isPresening.toggle()
-                }).background(self.ratings[0].rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all) : Color(self.settings.selectedTheme+"FillModalCardColor").edgesIgnoringSafeArea(.all))
+                }, dismiss: {self.isPresening = false}).background(self.ratings[0].rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all) : Color(self.settings.selectedTheme+"FillModalCardColor").edgesIgnoringSafeArea(.all))
                 .environmentObject(self.settings)
         }
     

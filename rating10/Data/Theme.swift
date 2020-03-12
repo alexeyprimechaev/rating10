@@ -63,6 +63,7 @@ let bundles = [
     
     Bundle(themes: [Theme(codeName: "strawberryYoghurt", displayName: "Strawberry Yogurt"),
                     Theme(codeName: "cherryYoghurt", displayName: "Cherry Yogurt"),
+                    Theme(codeName: "bananaYoghurt", displayName: "Banana Yogurt"),
                     Theme(codeName: "blueberryYoghurt", displayName: "Blueberry Yogurt"),
                     Theme(codeName: "naturalYoghurt", displayName: "Natural Yogurt"),
                     Theme(codeName: "raspberryYoghurt", displayName: "Raspberry Yogurt")

@@ -22,9 +22,14 @@ struct KalSheet: View {
         
         VStack(alignment: .leading, spacing: 0) {
             HeaderBar(leadingAction: {self.dismiss()}, leadingTitle: "Dismiss", leadingIcon: "xmark", trailingAction: {})
-            VStack(alignment: .leading, spacing: 14) {
+            VStack(alignment: .leading, spacing: 0) {
+                Group {
+                    Text("Congrats!").padding(7)
+                    Text("You have unlocked").padding(.horizontal, 7)
+                }.font(.system(size: 27, weight: .semibold, design: .default))
+                Spacer().frame(height: 14)
             RegularButton(title: selectedBundle.displayName, icon: (UserDefaults.standard.bool(forKey: selectedBundle.productID)) ? "lock.open" : "lock.fill" , subtitle: (UserDefaults.standard.bool(forKey: selectedBundle.productID)) ? "Purchased" : "Purchase", isActive: (UserDefaults.standard.bool(forKey: selectedBundle.productID)),
-                action: {})
+                          action: {})
                 ForEach(selectedBundle.themes, id: \.self) { theme in
                     ThemeView(imageName: "", title: theme.displayName, theme: theme, productID: self.selectedBundle.productID, action: {
                             self.settings.selectedTheme = theme.codeName

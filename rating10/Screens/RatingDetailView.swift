@@ -15,18 +15,26 @@ struct RatingDetailView: View {
     @EnvironmentObject var settings: UserSettings
     
     var action: () -> ()
+    
+    var dismiss: () -> ()
 
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 7) {
                 Spacer().frame(height:21)
-                TextField("Enter Name", text: $rating.title)
+                TextField("Enter Name", text: $rating.title) {
+                    if self.rating.title == "" {
+                        self.action()
+                    }
+                    self.dismiss()
+                }
                     .introspectTextField { textField in
-                            textField.becomeFirstResponder()
-                            textField.font = UIFont(name: "AppleColorEmoji", size: 34)
-                            textField.font = .systemFont(ofSize: 34, weight: .bold)
-                                      
+                        textField.becomeFirstResponder()
+                        let str = NSAttributedString(string: "Enter Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: self.rating.rating == Rating.ratings[0] ? self.settings.selectedTheme+"OutlineCardTextColor" : self.settings.selectedTheme+"FillCardTextColor")?.withAlphaComponent(0.5)])
+                        textField.attributedPlaceholder = str
+                        textField.font = UIFont(name: "AppleColorEmoji", size: 34)
+                        textField.font = .systemFont(ofSize: 34, weight: .bold)
                     }
                     .titleStyle()
                     .foregroundColor(rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"OutlineCardTextColor") : Color(self.settings.selectedTheme+"FillCardTextColor"))

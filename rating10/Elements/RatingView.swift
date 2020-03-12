@@ -50,7 +50,7 @@ struct RatingView: View {
             RatingDetailView(rating: self.rating, action: {
                 self.managedObjectContext.delete(self.rating)
                 self.showDetail.toggle()
-            }).background(self.rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all) : Color(self.settings.selectedTheme+"FillModalCardColor").edgesIgnoringSafeArea(.all))
+            }, dismiss: { self.showDetail.toggle()}).background(self.rating.rating == Rating.ratings[0] ? Color(self.settings.selectedTheme+"BackgroundColor").edgesIgnoringSafeArea(.all) : Color(self.settings.selectedTheme+"FillModalCardColor").edgesIgnoringSafeArea(.all))
             .environmentObject(self.settings)
         }
                     

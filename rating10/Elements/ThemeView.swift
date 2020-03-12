@@ -36,7 +36,7 @@ struct ThemeView: View {
                     }
 
                                }
-                Text(title).smallTitleStyle().opacity(UserDefaults.standard.bool(forKey: productID) ? 1: 0.5)
+                Text(title).smallTitleStyle().opacity(UserDefaults.standard.bool(forKey: productID) ? 1: 0.5).foregroundColor(Color(theme.codeName+"OutlineCardTextColor"))
             }
             }.padding(7).buttonStyle(DeepButtonStyle())
     }
