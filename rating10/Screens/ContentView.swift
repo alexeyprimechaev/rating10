@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import ASCollectionView
 
 struct ContentView: View {
     

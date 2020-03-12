@@ -33,7 +33,7 @@ struct BottomBar: View {
                 self.isPresening = true
             }) {
                 HStack {
-                Image(systemName: "plus")
+                    Image(systemName: "plus").smallTitleStyle()
                     .foregroundColor(Color(self.settings.selectedTheme+"AddButtonColor"))
                 Text("Add Rating")
                     .fontWeight(.semibold)
