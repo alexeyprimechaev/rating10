@@ -69,8 +69,9 @@ struct TitleBar: View {
                 }.padding(16)
 
                 .sheet(isPresented: $showSettings) {
-                    SettingsView(selectedBundle: self.$selectedBundle, showKalSheet: self.$kalSheet, dismiss: {self.showSettings = false})
-                    .environmentObject(self.settings)
+                    SettingsView(selectedBundle: self.$selectedBundle, showKalSheet: self.$kalSheet, dismiss: {self.showSettings = false}, showSelf: {self.showSettings = true}).environmentObject(self.settings
+                    )
+                    //SettingsView(settings: self.$selectedBundle, selectedBundle: self.$kalSheet, showKalSheet: {self.showSettings = false})
                 }
             }
         }

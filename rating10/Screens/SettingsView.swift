@@ -22,14 +22,23 @@ struct SettingsView: View {
     
     var dismiss: () -> ()
     
+    var showSelf: () -> ()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HeaderBar(leadingAction: {self.dismiss()}, leadingTitle: "Dismiss", leadingIcon: "xmark", trailingAction: {})
+            HeaderBar(
+                leadingAction: {
+                    self.dismiss()
+                }, leadingTitle: "Dismiss", leadingIcon: "xmark",
+                trailingAction: {
+                    self.restorePurchases()
+            }, trailingTitle: "Restore", trailingIcon: "arrow.clockwise"
+            )
         ScrollView {
             ForEach(bundles, id: \.self) { bundle in
                 HStack() {
                 VStack(alignment: .leading) {
-                    RegularButton(title: bundle.displayName, icon: (UserDefaults.standard.bool(forKey: bundle.productID)) ? "lock.open" : "lock.fill" , subtitle: (UserDefaults.standard.bool(forKey: bundle.productID)) ? "Purchased" : "Purchase", isActive: (UserDefaults.standard.bool(forKey: bundle.productID)),
+                    RegularButton(title: bundle.displayName, icon: (UserDefaults.standard.bool(forKey: bundle.productID)) ? "lock.open" : "lock.fill" , subtitle: (UserDefaults.standard.bool(forKey: bundle.productID)) ? "Unlocked" : "Unlock", isActive: (UserDefaults.standard.bool(forKey: bundle.productID)),
                         action: {
                             
                             self.purchaseProduct(bundle: bundle)
@@ -128,7 +137,8 @@ struct SettingsView: View {
                     let defaults = UserDefaults.standard
                     defaults.set(true, forKey: purchase.productId)
                 }
-              //  print("Restore Success: \(results.restoredPurchases)")
+            self.dismiss()
+            
             
             }
             else {
